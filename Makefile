@@ -10,12 +10,10 @@ all:build
 rebuild	: clean all
 
 build:
-	docker run --rm -it -v $(PWD)/src:/src gcc bash -c 'cd src && make -j8'
-
+	docker run --rm -it -v $(PWD)/src:/src argcv/loader bash -c 'cd src && make -j8'
 
 clean:
-	docker run --rm -it -v $(PWD)/src:/src gcc bash -c 'cd src && make clean'
+	docker run --rm -it -v $(PWD)/src:/src argcv/loader bash -c 'cd src && make clean'
 
-	
 
 
